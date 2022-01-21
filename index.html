@@ -5,19 +5,23 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DOM Problem 3</title>
-    <link rel='stylesheet' type='text/css' media='screen' href='dom-problem-3.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='stylesheet.css'>
 </head>
 <body>
     
     <button onclick="tableFunction()">Click Here!</button>
     <table class="table" id="demo">
         <tr>
-            <td>Hello</td>
-            <td>Hello</td>
+            <th>1st</th>
+            <th>2nd</th>
         </tr>
         <tr>
-            <td>Hello</td>
-            <td>Hello</td>
+            <td>Cell A</td>
+            <td>Cell B</td>
+        </tr>
+        <tr>
+            <td>Cell C</td>
+            <td>Cell D</td>
         </tr>
     </table>
 
@@ -25,10 +29,10 @@
         function tableFunction() {
             const table = document.getElementById("demo");
             const addRow = table.insertRow(0);
-            const firstRow = addRow.insertCell(0);
-            const secondRow = addRow.insertCell(1);
-            firstRow.innerHTML = "FIRST CELL";
-            secondRow.innerHTML = "SECOND CELL";
+            const firstCell = addRow.insertCell(0);
+            const secondCell = addRow.insertCell(1);
+            firstCell.innerHTML = "Cell X";
+            secondCell.innerHTML = "Cell Y";
         
 
         }
